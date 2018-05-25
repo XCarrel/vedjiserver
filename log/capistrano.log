@@ -1,0 +1,231 @@
+# Logfile created on 2018-05-24 14:29:57 +0200 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-24 14:29:57 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [851568ac] Running /usr/bin/env mkdir -p /tmp as thegpnv@gpnv.mycpnv.ch
+ DEBUG [851568ac] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-24 14:35:20 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6f7dec7f] Running /usr/bin/env mkdir -p /tmp as vedjiz@vedjiz.mycpnv.ch
+ DEBUG [6f7dec7f] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-24 14:38:04 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [067bdcc1] Running /usr/bin/env mkdir -p /tmp as vedjiz@vedjiz.mycpnv.ch
+ DEBUG [067bdcc1] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:44:04 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2bcc03a8] Running /usr/bin/env mkdir -p /tmp as vedjiz@vedjiz.mycpnv.ch
+ DEBUG [2bcc03a8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:45:39 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7b871e7c] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7b871e7c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:47:21 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ae55bea5] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [ae55bea5] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:49:08 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [76529cb8] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [76529cb8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:49:55 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f0049831] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [f0049831] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f0049831] Finished in 0.916 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 0.0%
+  INFO Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 100.0%
+  INFO [21ebf419] Running /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [21ebf419] Command: /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh
+  INFO [21ebf419] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [e4b0b526] Running /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [e4b0b526] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD )
+ DEBUG [e4b0b526] 	error: The requested URL returned error: 403 Forbidden while accessing https://github.com/XCarrel/vedjiserver.git/info/refs
+
+fatal: HTTP request failed
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:55:44 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5064ac46] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [5064ac46] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5064ac46] Finished in 0.182 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 0.0%
+  INFO Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 100.0%
+  INFO [c83504c7] Running /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [c83504c7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh
+  INFO [c83504c7] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [a69168d0] Running /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a69168d0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD )
+ DEBUG [a69168d0] 	error: The requested URL returned error: 403 Forbidden while accessing https://github.com/XCarrel/vedjiserver.git/info/refs
+
+fatal: HTTP request failed
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:56:40 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [13adfee9] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [13adfee9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [13adfee9] Finished in 0.544 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 0.0%
+  INFO Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 100.0%
+  INFO [1e492738] Running /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [1e492738] Command: /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh
+  INFO [1e492738] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [c803b86a] Running /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [c803b86a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD )
+  INFO [c803b86a] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO [df1622f5] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared /home/vedjserver/vedjserver.mycpnv.ch/releases as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [df1622f5] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared /home/vedjserver/vedjserver.mycpnv.ch/releases
+  INFO [df1622f5] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [9cc80532] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [9cc80532] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs
+  INFO [9cc80532] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [1beb20fc] Running [ -f /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [1beb20fc] Command: [ -f /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION ]
+ DEBUG [1beb20fc] Finished in 0.144 seconds with exit status 1 (failed).
+ DEBUG [f0fed712] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [f0fed712] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [f0fed712] Finished in 0.163 seconds with exit status 0 (successful).
+  INFO [3a0860b6] Running /usr/bin/env mkdir -p storage/app as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [3a0860b6] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/app
+  INFO [3a0860b6] Finished in 0.201 seconds with exit status 0 (successful).
+ DEBUG [a38704b2] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a38704b2] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [a38704b2] Finished in 0.142 seconds with exit status 0 (successful).
+  INFO [2cc385ba] Running /usr/bin/env mkdir -p storage/framework/cache as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [2cc385ba] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/cache
+  INFO [2cc385ba] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [a638028c] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a638028c] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [a638028c] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [0873471e] Running /usr/bin/env mkdir -p storage/framework/sessions as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [0873471e] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/sessions
+  INFO [0873471e] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [85228455] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [85228455] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [85228455] Finished in 0.195 seconds with exit status 0 (successful).
+  INFO [be449e68] Running /usr/bin/env mkdir -p storage/framework/views as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [be449e68] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/views
+  INFO [be449e68] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [0887b76c] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [0887b76c] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [0887b76c] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [a9c56531] Running /usr/bin/env mkdir -p storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a9c56531] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/logs
+  INFO [a9c56531] Finished in 0.146 seconds with exit status 0 (successful).
+ DEBUG [0f38f9e0] Running [ -f /home/vedjserver/vedjserver.mycpnv.ch/repo/HEAD ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [0f38f9e0] Command: [ -f /home/vedjserver/vedjserver.mycpnv.ch/repo/HEAD ]
+ DEBUG [0f38f9e0] Finished in 0.144 seconds with exit status 1 (failed).
+ DEBUG [d80db1d2] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [d80db1d2] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch'" 1>&2; false; fi
+ DEBUG [d80db1d2] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [1123607d] Running /usr/bin/env git clone --mirror https://github.com/XCarrel/vedjiserver.git /home/vedjserver/vedjserver.mycpnv.ch/repo as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [1123607d] Command: cd /home/vedjserver/vedjserver.mycpnv.ch && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git clone --mirror https://github.com/XCarrel/vedjiserver.git /home/vedjserver/vedjserver.mycpnv.ch/repo )
+ DEBUG [1123607d] 	Initialized empty Git repository in /home/vedjserver/vedjserver.mycpnv.ch/repo/
+ DEBUG [1123607d] 	warning: You appear to have cloned an empty repository.
+  INFO [1123607d] Finished in 0.774 seconds with exit status 0 (successful).
+ DEBUG [7e55abe6] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7e55abe6] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [7e55abe6] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [366d07bc] Running /usr/bin/env git remote set-url origin https://github.com/XCarrel/vedjiserver.git as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [366d07bc] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git remote set-url origin https://github.com/XCarrel/vedjiserver.git )
+  INFO [366d07bc] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [11eefe99] Running /usr/bin/env git remote update --prune as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [11eefe99] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [11eefe99] 	Fetching origin
+  INFO [11eefe99] Finished in 0.772 seconds with exit status 0 (successful).
+ DEBUG [6440a76a] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6440a76a] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [6440a76a] Finished in 0.159 seconds with exit status 0 (successful).
+  INFO [ecbfc37a] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085644 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [ecbfc37a] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085644 )
+  INFO [ecbfc37a] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [6c4d2fd3] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085644 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6c4d2fd3] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085644 )
+ DEBUG [6c4d2fd3] 	fatal: Not a valid object name
+tar: Ceci ne ressemble pas à une archive de type « tar »
+tar: Arrêt avec code d'échec à cause des erreurs précédentes
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-25 10:57:59 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [410d44eb] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [410d44eb] Command: /usr/bin/env mkdir -p /tmp
+  INFO [410d44eb] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 0.0%
+  INFO Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 100.0%
+  INFO [e3bb4f9b] Running /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [e3bb4f9b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh
+  INFO [e3bb4f9b] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [f1e8d2dd] Running /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [f1e8d2dd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD )
+  INFO [f1e8d2dd] Finished in 1.433 seconds with exit status 0 (successful).
+  INFO [4a11e2e8] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared /home/vedjserver/vedjserver.mycpnv.ch/releases as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [4a11e2e8] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared /home/vedjserver/vedjserver.mycpnv.ch/releases
+  INFO [4a11e2e8] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [7aba3d78] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7aba3d78] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs
+  INFO [7aba3d78] Finished in 0.768 seconds with exit status 0 (successful).
+ DEBUG [1d181cc4] Running [ -f /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [1d181cc4] Command: [ -f /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION ]
+ DEBUG [1d181cc4] Finished in 0.237 seconds with exit status 1 (failed).
+ DEBUG [2137a433] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [2137a433] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [2137a433] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [524791be] Running /usr/bin/env mkdir -p storage/app as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [524791be] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/app
+  INFO [524791be] Finished in 0.203 seconds with exit status 0 (successful).
+ DEBUG [5154f651] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [5154f651] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [5154f651] Finished in 0.213 seconds with exit status 0 (successful).
+  INFO [68660511] Running /usr/bin/env mkdir -p storage/framework/cache as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [68660511] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/cache
+  INFO [68660511] Finished in 0.325 seconds with exit status 0 (successful).
+ DEBUG [0746c71a] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [0746c71a] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [0746c71a] Finished in 0.383 seconds with exit status 0 (successful).
+  INFO [35628303] Running /usr/bin/env mkdir -p storage/framework/sessions as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [35628303] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/sessions
+  INFO [35628303] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [3cd32d9e] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [3cd32d9e] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [3cd32d9e] Finished in 0.338 seconds with exit status 0 (successful).
+  INFO [5aa42e0c] Running /usr/bin/env mkdir -p storage/framework/views as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [5aa42e0c] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/views
+  INFO [5aa42e0c] Finished in 0.335 seconds with exit status 0 (successful).
+ DEBUG [af9bc5c1] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [af9bc5c1] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [af9bc5c1] Finished in 0.313 seconds with exit status 0 (successful).
+  INFO [db827970] Running /usr/bin/env mkdir -p storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [db827970] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/logs
+  INFO [db827970] Finished in 0.276 seconds with exit status 0 (successful).
+ DEBUG [7e2d0ff6] Running [ -f /home/vedjserver/vedjserver.mycpnv.ch/repo/HEAD ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7e2d0ff6] Command: [ -f /home/vedjserver/vedjserver.mycpnv.ch/repo/HEAD ]
+ DEBUG [7e2d0ff6] Finished in 0.390 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/vedjserver/vedjserver.mycpnv.ch/repo
+ DEBUG [c604bb82] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [c604bb82] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [c604bb82] Finished in 0.334 seconds with exit status 0 (successful).
+  INFO [77127323] Running /usr/bin/env git remote set-url origin https://github.com/XCarrel/vedjiserver.git as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [77127323] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git remote set-url origin https://github.com/XCarrel/vedjiserver.git )
+  INFO [77127323] Finished in 0.262 seconds with exit status 0 (successful).
+  INFO [5e905625] Running /usr/bin/env git remote update --prune as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [5e905625] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5e905625] 	Fetching origin
+  INFO [5e905625] Finished in 1.121 seconds with exit status 0 (successful).
+ DEBUG [97dd95bb] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [97dd95bb] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [97dd95bb] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [e9991a42] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085806 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [e9991a42] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085806 )
+  INFO [e9991a42] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [288dcada] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085806 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [288dcada] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/vedjserver/vedjserver.mycpnv.ch/releases/20180525085806 )
+ DEBUG [288dcada] 	fatal: Not a valid object name
+ DEBUG [288dcada] 	tar: Ceci ne ressemble pas à une archive de type « tar »
+ DEBUG [288dcada] 	tar: Arrêt avec code d'échec à cause des erreurs précédentes
