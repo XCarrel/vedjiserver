@@ -65,7 +65,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Vedjiserver
+                    Vedjserver
                 </div>
 
                 <h4>Points d'appel</h4>
