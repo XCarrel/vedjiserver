@@ -92,13 +92,14 @@
                     </tr>
                     <tr>
                         <td>GET</td>
-                        <td style="padding: 5px">Liste des légumes modifiés après une certaine date<br>(format: YYYYMMDDHHMMSS)</td>
+                        <td style="padding: 5px">Liste des légumes modifiés après une certaine date<br>(format: YYYY-MM-DD HH:MM:SS)</td>
                         <td style="padding: 5px">api/v1/vegetables/{datetime}</td>
                     </tr>
                     <tr>
                         <td>POST</td>
-                        <td style="padding: 5px">Modification d'un légume</td>
-                        <td style="padding: 5px">api/v1/vegetable/{id}</td>
+                        <td style="padding: 5px">Modification du stock d'un légume</td>
+                        <td style="padding: 5px">api/v1/newstock</td>
+                        <td>Paramètres:<br>- id<br>- newstock<br>- ts</td>
                     </tr>
                 </table>
             </div>
