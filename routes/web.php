@@ -18,7 +18,9 @@ header('Access-Control-Allow-Headers: X-Requested-With, content-type, access-con
 //header('Content-type: application/xml');
 
 Route::get('/api/v1/lastupdate', function (Request $request) {
-    return json_encode("lastupdate");
+    return json_encode(DB::table('products')
+        ->select('updated_at')
+        ->latest()->first());
 });
 
 Route::get('/api/v1/vegetables', function (Request $request) {
