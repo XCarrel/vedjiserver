@@ -13,12 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-header('Access-Control-Allow-Origin: *');
-//header('Access-Control-Allow-Headers: Content-type');
-header('Access-Control-Allow-Headers: X-Requested-With, content-type, access-control-allow-origin, access-control-allow-methods, access-control-allow-headers');
-//header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-//header('Content-type: application/xml');
-
 Route::get('/api/v1/lastupdate', function (Request $request) {
     return json_encode(DB::table('products')
         ->select('updated_at')
@@ -49,9 +43,7 @@ Route::get('/api/v1/vegetables/nopics', function (Request $request) {
 });
 
 Route::patch('/api/v1/newstock', function (Request $request) {
-    $changes = $request->input('changes');
-    error_log(print_r($changes, 1));
-    foreach ($changes as $change)
+    foreach ($request->changes as $change)
     {
         $prod = App\Products::find($change['id']);
         $prod->stock = $change['stock'];
