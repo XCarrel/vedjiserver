@@ -96,10 +96,10 @@
                         <td style="padding: 5px">api/v1/vegetables/{datetime}</td>
                     </tr>
                     <tr>
-                        <td>POST</td>
-                        <td style="padding: 5px">Modification du stock d'un légume</td>
+                        <td>PATCH</td>
+                        <td style="padding: 5px">Modification du stock d'un ou plusieurs légume(s)</td>
                         <td style="padding: 5px">api/v1/newstock</td>
-                        <td>Paramètres:<br>- id<br>- newstock<br>- ts</td>
+                        <td>Paramètre:changes [{id: ... , stock: ...},{id: ... , stock: ...}]</td>
                     </tr>
                 </table>
             </div>

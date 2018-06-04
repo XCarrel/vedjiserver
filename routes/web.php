@@ -1,5 +1,7 @@
 <?php
+
 use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,32 +26,38 @@ Route::get('/api/v1/lastupdate', function (Request $request) {
 });
 
 Route::get('/api/v1/vegetables', function (Request $request) {
-    return json_encode(DB::table('products')
+    $products = DB::table('products')
         ->join('units', 'units.id', '=', 'products.unit_id')
-        ->get());
+        ->select('products.id as id', 'productName', 'price', 'unitName as unit', 'stock', 'picture as image64', 'products.updated_at')
+        ->get();
+
+    for ($i = 0; $i < count($products); $i++)
+        $products[$i]->suppliers = DB::table('product_supplier')
+            ->join('users', 'users.id', '=', 'supplier_id')
+            ->select('firstName', 'lastName', 'companyName')
+            ->where('product_id', '=', $products[$i]->id)
+            ->get();
+
+    return json_encode($products);
 });
 
 Route::get('/api/v1/vegetables/nopics', function (Request $request) {
     return json_encode(DB::table('products')
         ->join('units', 'units.id', '=', 'products.unit_id')
-        ->select('productName','unit_id','unitName', 'stock','price')
+        ->select('productName', 'unit_id', 'unitName', 'stock', 'price')
         ->get());
 });
 
-Route::post('/api/v1/newstock', function (Request $request) {
-    $id = $request->input('id');
-    $newstock = $request->input('newstock');
-    $ts = $request->input('ts');
-    $prod = App\Products::find($id);
-    if ($prod->updated_at == $ts)
+Route::patch('/api/v1/newstock', function (Request $request) {
+    $changes = $request->input('changes');
+    error_log(print_r($changes, 1));
+    foreach ($changes as $change)
     {
-        $prod->stock = $newstock;
+        $prod = App\Products::find($change['id']);
+        $prod->stock = $change['stock'];
         $prod->save();
-        $prod = App\Products::find($id); // read record back to get the update timestamp
-        return json_encode($prod->updated_at->format("Y-m-d H:i:s"));
     }
-    else
-        return json_encode(["Error number" => 901, "Error message" => "Record was modified by someone else (".$prod->updated_at." vs $ts"]);
+    return json_encode("ok");
 });
 
 Route::get('/api/v1/vegetables/{datetime}', function (Request $request, $datetime) {
@@ -57,8 +65,8 @@ Route::get('/api/v1/vegetables/{datetime}', function (Request $request, $datetim
         return json_encode(["Error number" => 900, "Error message" => "Invalid date format"]);
     return json_encode(DB::table('products')
         ->join('units', 'units.id', '=', 'products.unit_id')
-        ->select('productName','unit_id','unitName', 'stock','price')
-        ->where ('products.updated_at', '>=', $datetime)
+        ->select('productName', 'unit_id', 'unitName', 'stock', 'price')
+        ->where('products.updated_at', '>=', $datetime)
         ->get());
 });
 
