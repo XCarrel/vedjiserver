@@ -15,8 +15,9 @@ use Illuminate\Http\Request;
 
 Route::get('/api/v1/lastupdate', function (Request $request) {
     return json_encode(DB::table('products')
-        ->select('updated_at')
-        ->latest()->first());
+        ->latest('updated_at')
+        ->first()
+    );
 });
 
 Route::get('/api/v1/vegetables', function (Request $request) {
@@ -57,7 +58,7 @@ Route::get('/api/v1/vegetables/{datetime}', function (Request $request, $datetim
         return json_encode(["Error number" => 900, "Error message" => "Invalid date format"]);
     return json_encode(DB::table('products')
         ->join('units', 'units.id', '=', 'products.unit_id')
-        ->select('productName', 'unit_id', 'unitName', 'stock', 'price')
+        ->select('products.id as id', 'productName', 'price', 'unitName as unit', 'stock', 'picture as image64', 'products.updated_at')
         ->where('products.updated_at', '>=', $datetime)
         ->get());
 });
