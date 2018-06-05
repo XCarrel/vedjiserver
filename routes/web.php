@@ -15,8 +15,9 @@ use Illuminate\Http\Request;
 
 Route::get('/api/v1/lastupdate', function (Request $request) {
     return json_encode(DB::table('products')
-        ->select('updated_at')
-        ->latest()->first());
+        ->latest('updated_at')
+        ->first()
+    );
 });
 
 Route::get('/api/v1/vegetables', function (Request $request) {
