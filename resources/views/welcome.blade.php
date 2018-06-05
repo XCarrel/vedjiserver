@@ -99,7 +99,13 @@
                         <td>PATCH</td>
                         <td style="padding: 5px">Modification du stock d'un ou plusieurs légume(s)</td>
                         <td style="padding: 5px">api/v1/newstock</td>
-                        <td>Paramètre:changes [{id: ... , stock: ...},{id: ... , stock: ...}]</td>
+                        <td>{"changes":[{"id": ... , "stock": ...},{"id": ... , "stock": ...}]}</td>
+                    </tr>
+                    <tr>
+                        <td>PATCH</td>
+                        <td style="padding: 5px">Modification des informations d'un légume</td>
+                        <td style="padding: 5px">api/v1/vegetables</td>
+                        <td>{"changes":[{"id": ... , "stock": ...},{"id": ... , "stock": ...}]}</td>
                     </tr>
                 </table>
             </div>

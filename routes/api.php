@@ -13,3 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::patch('/v1/vegetables', function (Request $request) {
+    foreach ($request->changes as $change)
+    {
+        $prod = App\Products::find($change['id']);
+        $prod->fill($change);
+        $prod->save();
+    }
+    return response()->json(["message" => "Modifications correctement effectuées"], 200);
+});
