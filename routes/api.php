@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::patch('/v1/newproductdatas', function (Request $request) {
+Route::patch('/v1/vegetables', function (Request $request) {
     foreach ($request->changes as $change)
     {
         $prod = App\Products::find($change['id']);

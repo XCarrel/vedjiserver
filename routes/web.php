@@ -63,6 +63,4 @@ Route::get('/api/v1/vegetables/{datetime}', function (Request $request, $datetim
         ->get());
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
