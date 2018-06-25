@@ -24,13 +24,13 @@ Route::get('/api/v1/lastupdate', function (Request $request) {
 Route::get('/api/v1/vegetables', function (Request $request) {
     $products = DB::table('products')
         ->join('units', 'units.id', '=', 'products.unit_id')
-        ->select('products.id as id', 'productName', 'price', 'unitName as unit', 'stock', 'picture as image64', 'products.updated_at')
+        ->select('products.id as id', 'productName', 'price', 'unitName as unit', 'stock', 'stockMin as low_stock_threshold', 'picture as image64', 'products.updated_at')
         ->get();
 
     for ($i = 0; $i < count($products); $i++)
         $products[$i]->suppliers = DB::table('product_supplier')
             ->join('users', 'users.id', '=', 'supplier_id')
-            ->select('firstName', 'lastName', 'companyName')
+            ->select('users.id as id', 'firstName', 'lastName', 'companyName')
             ->where('product_id', '=', $products[$i]->id)
             ->get();
 
@@ -63,5 +63,33 @@ Route::get('/api/v1/vegetables/{datetime}', function (Request $request, $datetim
         ->where('products.updated_at', '>=', $datetime)
         ->get());
 });
+
+Route::post('/api/v1/withdraw', function (Request $request) {
+    \App\provisionning_orders::destroy($request->orderid);
+    return json_encode('ok');
+
+});
+
+Route::post('/api/v1/order', function (Request $request) {
+    error_log("order");
+    $order = new \App\provisionning_orders();
+    $order->placed_by = $request->placedby;
+    $order->product_id = $request->productid;
+    $order->user_id = $request->providerid;
+    $order->quantity = $request->quantity;
+
+    $order->save();
+    return json_encode('ok');
+
+});
+
+Route::get('/api/v1/orders', function (Request $request) {
+    return json_encode(DB::table('provisionning_orders')
+        ->join('products', 'products.id', '=', 'provisionning_orders.product_id')
+        ->join('users', 'users.id', '=', 'provisionning_orders.user_id')
+        ->select('provisionning_orders.id','productName', 'quantity', 'users.companyName')
+        ->get());
+});
+
 
 Route::view('/', 'welcome');
