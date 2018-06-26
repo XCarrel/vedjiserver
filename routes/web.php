@@ -87,7 +87,7 @@ Route::get('/api/v1/orders', function (Request $request) {
     return json_encode(DB::table('provisionning_orders')
         ->join('products', 'products.id', '=', 'provisionning_orders.product_id')
         ->join('users', 'users.id', '=', 'provisionning_orders.user_id')
-        ->select('provisionning_orders.id','productName', 'quantity', 'users.companyName')
+        ->select('provisionning_orders.id','productName', 'quantity', 'users.companyName', 'placed_by')
         ->get());
 });
 
