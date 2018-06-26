@@ -83,7 +83,7 @@ Route::post('/api/v1/order', function (Request $request) {
         return json_encode('ok');
     } catch (Exception $e) {
         error_log("Exception:".$e->getMessage());
-        abort(421, $e->getMessage());
+        abort(477, $e->getMessage());
     }
 
 });
