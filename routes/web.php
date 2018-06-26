@@ -71,15 +71,20 @@ Route::post('/api/v1/withdraw', function (Request $request) {
 });
 
 Route::post('/api/v1/order', function (Request $request) {
-    error_log("order");
     $order = new \App\provisionning_orders();
     $order->placed_by = $request->placedby;
     $order->product_id = $request->productid;
     $order->user_id = $request->providerid;
     $order->quantity = $request->quantity;
+    error_log("order: ".$request->placedby.", ".$request->productid.", ".$request->providerid.", ".$request->quantity);
 
-    $order->save();
-    return json_encode('ok');
+    try {
+        $order->save();
+        return json_encode('ok');
+    } catch (Exception $e) {
+        error_log("Exception:".$e->getMessage());
+        abort(421, $e->getMessage());
+    }
 
 });
 

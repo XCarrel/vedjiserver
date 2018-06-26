@@ -3687,3 +3687,332 @@ Package manifest generated successfully.
   INFO [2bf4549b] Running /usr/bin/env echo "Branch master (at ebfcdc08f2af084745549ecbdb41a8fb4efb4097) deployed as release 20180605114414 by Xavier" >> /home/vedjserver/vedjserver.mycpnv.ch/revisions.log as vedjserver@vedjserver.mycpnv.ch
  DEBUG [2bf4549b] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/releases && /usr/bin/env echo "Branch master (at ebfcdc08f2af084745549ecbdb41a8fb4efb4097) deployed as release 20180605114414 by Xavier" >> /home/vedjserver/vedjserver.mycpnv.ch/revisions.log
   INFO [2bf4549b] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-26 07:25:26 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [eb4fa0dc] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [eb4fa0dc] Command: /usr/bin/env mkdir -p /tmp
+ DEBUG [eb4fa0dc] 	This account is currently not available.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-26 07:26:34 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3d4e40c1] Running /usr/bin/env mkdir -p /tmp as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [3d4e40c1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3d4e40c1] Finished in 0.222 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 0.0%
+  INFO Uploading /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh 100.0%
+  INFO [29aca7c4] Running /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [29aca7c4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh
+  INFO [29aca7c4] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [10b6063f] Running /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [10b6063f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git ls-remote https://github.com/XCarrel/vedjiserver.git HEAD )
+ DEBUG [10b6063f] 	5a44d6b1afa1f73dd178aa8177a3f52213f4c81b	HEAD
+  INFO [10b6063f] Finished in 0.676 seconds with exit status 0 (successful).
+  INFO [7dab0992] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared /home/vedjserver/vedjserver.mycpnv.ch/releases as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7dab0992] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared /home/vedjserver/vedjserver.mycpnv.ch/releases
+  INFO [7dab0992] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [c30ff0a4] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [c30ff0a4] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs
+  INFO [c30ff0a4] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [f8e357c1] Running [ -f /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [f8e357c1] Command: [ -f /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION ]
+ DEBUG [f8e357c1] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [ad8239d1] Running /usr/bin/env cat /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION 2>/dev/null as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [ad8239d1] Command: /usr/bin/env cat /home/vedjserver/vedjserver.mycpnv.ch/current/REVISION 2>/dev/null
+ DEBUG [ad8239d1] 	ebfcdc08f2af084745549ecbdb41a8fb4efb4097
+ DEBUG [ad8239d1] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [eb3bfe90] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [eb3bfe90] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [eb3bfe90] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [d27fa377] Running /usr/bin/env mkdir -p storage/app as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [d27fa377] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/app
+  INFO [d27fa377] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [2bfe3b0f] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [2bfe3b0f] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [2bfe3b0f] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [985f6281] Running /usr/bin/env mkdir -p storage/framework/cache as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [985f6281] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/cache
+  INFO [985f6281] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [6873d61c] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6873d61c] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [6873d61c] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [cf1225c3] Running /usr/bin/env mkdir -p storage/framework/sessions as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [cf1225c3] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/sessions
+  INFO [cf1225c3] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [a7471394] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a7471394] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [a7471394] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [5765ee2b] Running /usr/bin/env mkdir -p storage/framework/views as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [5765ee2b] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/views
+  INFO [5765ee2b] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [ffe25753] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [ffe25753] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/shared; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [ffe25753] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [f76d3c58] Running /usr/bin/env mkdir -p storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [f76d3c58] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/logs
+  INFO [f76d3c58] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [a3107456] Running [ -f /home/vedjserver/vedjserver.mycpnv.ch/repo/HEAD ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a3107456] Command: [ -f /home/vedjserver/vedjserver.mycpnv.ch/repo/HEAD ]
+ DEBUG [a3107456] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/vedjserver/vedjserver.mycpnv.ch/repo
+ DEBUG [105c9f5a] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [105c9f5a] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [105c9f5a] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [b7723e3a] Running /usr/bin/env git remote set-url origin https://github.com/XCarrel/vedjiserver.git as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [b7723e3a] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git remote set-url origin https://github.com/XCarrel/vedjiserver.git )
+  INFO [b7723e3a] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [65274af8] Running /usr/bin/env git remote update --prune as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [65274af8] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [65274af8] 	Fetching origin
+ DEBUG [65274af8] 	From https://github.com/XCarrel/vedjiserver
+   ebfcdc0..5a44d6b  master     -> master
+  INFO [65274af8] Finished in 1.192 seconds with exit status 0 (successful).
+ DEBUG [2564e1e7] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [2564e1e7] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [2564e1e7] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [948c697e] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [948c697e] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 )
+  INFO [948c697e] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [7e5bc2d0] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7e5bc2d0] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 )
+  INFO [7e5bc2d0] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [01d279df] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [01d279df] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/repo; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [01d279df] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [4196cd3c] Running /usr/bin/env git rev-list --max-count=1 master as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [4196cd3c] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-vedjserver.mycpnv.ch-production-Xavier.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4196cd3c] 	5a44d6b1afa1f73dd178aa8177a3f52213f4c81b
+ DEBUG [4196cd3c] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [e6e2a633] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [e6e2a633] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636'" 1>&2; false; fi
+ DEBUG [e6e2a633] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [7d89f4b0] Running /usr/bin/env echo "5a44d6b1afa1f73dd178aa8177a3f52213f4c81b" > REVISION as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7d89f4b0] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 && /usr/bin/env echo "5a44d6b1afa1f73dd178aa8177a3f52213f4c81b" > REVISION
+  INFO [7d89f4b0] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [46afeaae] Running /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [46afeaae] Command: /usr/bin/env mkdir -p /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework
+  INFO [46afeaae] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [02bfe8c1] Running [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [02bfe8c1] Command: [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app ]
+ DEBUG [02bfe8c1] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [f2d5a507] Running [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [f2d5a507] Command: [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app ]
+ DEBUG [f2d5a507] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [53e6a56f] Running /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [53e6a56f] Command: /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app
+  INFO [53e6a56f] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [65ac3d28] Running /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [65ac3d28] Command: /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/app /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/app
+  INFO [65ac3d28] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [8a59b7fc] Running [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [8a59b7fc] Command: [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache ]
+ DEBUG [8a59b7fc] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [64d3929a] Running [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [64d3929a] Command: [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache ]
+ DEBUG [64d3929a] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [4e28083d] Running /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [4e28083d] Command: /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache
+  INFO [4e28083d] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [036a3aab] Running /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [036a3aab] Command: /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/cache /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/cache
+  INFO [036a3aab] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [c28abe01] Running [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [c28abe01] Command: [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions ]
+ DEBUG [c28abe01] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [e4b6d43b] Running [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [e4b6d43b] Command: [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions ]
+ DEBUG [e4b6d43b] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [a64465b6] Running /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [a64465b6] Command: /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions
+  INFO [a64465b6] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [62ee38a6] Running /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [62ee38a6] Command: /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/sessions /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/sessions
+  INFO [62ee38a6] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [231d2507] Running [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [231d2507] Command: [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views ]
+ DEBUG [231d2507] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [6285e4b1] Running [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6285e4b1] Command: [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views ]
+ DEBUG [6285e4b1] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [aa23489e] Running /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [aa23489e] Command: /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views
+  INFO [aa23489e] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [3a4544fb] Running /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [3a4544fb] Command: /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/framework/views /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/framework/views
+  INFO [3a4544fb] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [6b2c9d9c] Running [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6b2c9d9c] Command: [ -L /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs ]
+ DEBUG [6b2c9d9c] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [b2fe6363] Running [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [b2fe6363] Command: [ -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs ]
+ DEBUG [b2fe6363] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [6c475713] Running /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6c475713] Command: /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs
+  INFO [6c475713] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [6a72ad99] Running /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [6a72ad99] Command: /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/shared/storage/logs /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/storage/logs
+  INFO [6a72ad99] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [8c49c68b] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [8c49c68b] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636'" 1>&2; false; fi
+ DEBUG [8c49c68b] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [61e45636] Running php -d allow_url_fopen=true /home/vedjserver/vedjserver.mycpnv.ch/shared/composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [61e45636] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 && php -d allow_url_fopen=true /home/vedjserver/vedjserver.mycpnv.ch/shared/composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
+ DEBUG [61e45636] 	Loading composer repositories with package information
+ DEBUG [61e45636] 	Installing dependencies from lock file
+ DEBUG [61e45636] 	Package operations: 38 installs, 0 updates, 0 removals
+ DEBUG [61e45636] 	  - Installing doctrine/inflector (v1.3.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing dragonmantank/cron-expression (v2.1.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing erusev/parsedown (1.7.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing vlucas/phpdotenv (v2.4.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/css-selector (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing tijsverkoyen/css-to-inline-styles (2.2.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/polyfill-php72 (v1.8.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/polyfill-mbstring (v1.8.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/var-dumper (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/routing (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/process (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/polyfill-ctype (v1.8.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/http-foundation (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/event-dispatcher (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing psr/log (1.0.2): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/debug (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/http-kernel (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	  - Installing symfony/finder (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/console (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	  - Installing egulias/email-validator (2.1.4): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	  - Installing swiftmailer/swiftmailer (v6.0.2): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing paragonie/random_compat (v2.0.12): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing ramsey/uuid (3.7.3): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing psr/simple-cache (1.0.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing psr/container (1.0.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing symfony/translation (v4.0.10): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing nesbot/carbon (1.25.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing monolog/monolog (1.23.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing league/flysystem (1.0.45): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing laravel/framework (v5.6.22): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing fideloper/proxy (4.0.0): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing jakub-onderka/php-console-color (0.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing nikic/php-parser (v4.0.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing jakub-onderka/php-console-highlighter (v0.3.2): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing dnoegel/php-xdg-base-dir (0.1): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing psy/psysh (v0.9.4): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	  - Installing laravel/tinker (v1.0.7): 
+ DEBUG [61e45636] 	Loading from cache
+ DEBUG [61e45636] 	
+ DEBUG [61e45636] 	Generating optimized autoload files
+ DEBUG [61e45636] 	> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+ DEBUG [61e45636] 	> @php artisan package:discover
+ DEBUG [61e45636] 	Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+ DEBUG [61e45636] 	Package manifest generated successfully.
+  INFO [61e45636] Finished in 1.871 seconds with exit status 0 (successful).
+ DEBUG [130b30cb] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [130b30cb] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636'" 1>&2; false; fi
+ DEBUG [130b30cb] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [ae5f7a2b] Running /usr/bin/env php artisan storage:link --env=production as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [ae5f7a2b] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 && /usr/bin/env php artisan storage:link --env=production
+ DEBUG [ae5f7a2b] 	The [public/storage] directory has been linked.
+  INFO [ae5f7a2b] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [fe0afe69] Running /usr/bin/env cp /home/vedjserver/vedjserver.mycpnv.ch/shared/.env /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/.env as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [fe0afe69] Command: /usr/bin/env cp /home/vedjserver/vedjserver.mycpnv.ch/shared/.env /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636/.env
+  INFO [fe0afe69] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [401f24ed] Running /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 /home/vedjserver/vedjserver.mycpnv.ch/releases/current as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [401f24ed] Command: /usr/bin/env ln -s /home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636 /home/vedjserver/vedjserver.mycpnv.ch/releases/current
+  INFO [401f24ed] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [08801485] Running /usr/bin/env mv /home/vedjserver/vedjserver.mycpnv.ch/releases/current /home/vedjserver/vedjserver.mycpnv.ch as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [08801485] Command: /usr/bin/env mv /home/vedjserver/vedjserver.mycpnv.ch/releases/current /home/vedjserver/vedjserver.mycpnv.ch
+  INFO [08801485] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [7788080c] Running /usr/bin/env ls -x /home/vedjserver/vedjserver.mycpnv.ch/releases as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [7788080c] Command: /usr/bin/env ls -x /home/vedjserver/vedjserver.mycpnv.ch/releases
+ DEBUG [7788080c] 	20180604131944	20180605063519	20180605063829	20180605080332	20180605114414
+20180626052636
+ DEBUG [7788080c] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on vedjserver.mycpnv.ch
+ DEBUG [59f24264] Running [ -d /home/vedjserver/vedjserver.mycpnv.ch/current ] as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [59f24264] Command: [ -d /home/vedjserver/vedjserver.mycpnv.ch/current ]
+ DEBUG [59f24264] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [69fee0b0] Running readlink /home/vedjserver/vedjserver.mycpnv.ch/current as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [69fee0b0] Command: readlink /home/vedjserver/vedjserver.mycpnv.ch/current
+ DEBUG [69fee0b0] 	/home/vedjserver/vedjserver.mycpnv.ch/releases/20180626052636
+ DEBUG [69fee0b0] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [36912f32] Running /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180604131944 as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [36912f32] Command: /usr/bin/env rm -rf /home/vedjserver/vedjserver.mycpnv.ch/releases/20180604131944
+  INFO [36912f32] Finished in 0.675 seconds with exit status 0 (successful).
+ DEBUG [d3a51c7f] Running if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases'" 1>&2; false; fi as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [d3a51c7f] Command: if test ! -d /home/vedjserver/vedjserver.mycpnv.ch/releases; then echo "Directory does not exist '/home/vedjserver/vedjserver.mycpnv.ch/releases'" 1>&2; false; fi
+ DEBUG [d3a51c7f] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [59884034] Running /usr/bin/env echo "Branch master (at 5a44d6b1afa1f73dd178aa8177a3f52213f4c81b) deployed as release 20180626052636 by Xavier" >> /home/vedjserver/vedjserver.mycpnv.ch/revisions.log as vedjserver@vedjserver.mycpnv.ch
+ DEBUG [59884034] Command: cd /home/vedjserver/vedjserver.mycpnv.ch/releases && /usr/bin/env echo "Branch master (at 5a44d6b1afa1f73dd178aa8177a3f52213f4c81b) deployed as release 20180626052636 by Xavier" >> /home/vedjserver/vedjserver.mycpnv.ch/revisions.log
+  INFO [59884034] Finished in 0.061 seconds with exit status 0 (successful).
