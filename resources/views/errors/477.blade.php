@@ -7,5 +7,5 @@
  */
 ?>
 
-<h1>ELoquent error</h1>
+<h1>Eloquent error</h1>
 {{ $exception->getMessage() }}
