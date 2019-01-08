@@ -5,6 +5,10 @@
             <div class="title m-b-md">
                 Vedjserver
             </div>
+            
+            <div class="links">
+                <a href="/">Accueil</a>
+            </div>
 
             <h4>Points d'appel</h4>
             <table style="text-align: left">
