@@ -10,4 +10,6 @@
                 <a href="/docApi">Documentation API</a>
                 <a href="/admin">Administration</a>
             </div>
+        </div>
+    </div>
 @endsection

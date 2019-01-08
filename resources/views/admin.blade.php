@@ -9,4 +9,6 @@
             <div class="links">
                 <a href="/">Accueil</a>
             </div>
+        </div>
+    </div>
 @endsection
