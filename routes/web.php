@@ -24,7 +24,7 @@ Route::get('/api/v1/lastupdate', function (Request $request) {
 Route::get('/api/v1/vegetables', function (Request $request) {
     $products = DB::table('products')
         ->join('units', 'units.id', '=', 'products.unit_id')
-        ->select('products.id as id', 'productName', 'price', 'unitName as unit', 'stock', 'stockMin as low_stock_threshold', 'picture as image64', 'products.updated_at')
+        ->select('products.id as id', 'productName', 'price', 'unitName as unit', 'stock', 'stock as low_stock_threshold', 'picture as image64', 'products.updated_at')
         ->get();
 
     for ($i = 0; $i < count($products); $i++)
