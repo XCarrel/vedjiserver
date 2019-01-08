@@ -98,3 +98,5 @@ Route::get('/api/v1/orders', function (Request $request) {
 
 
 Route::view('/', 'welcome');
+
+Route::view('/docApi', 'docApi');
