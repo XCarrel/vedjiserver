@@ -17,13 +17,17 @@
                     <th>Stock</th>
                     <th>Prix</th>
                 </tr>
-                @foreach($products as $product)
-                    <tr>
-                        <td>{{$product->productName}}</td>
-                        <td>{{$product->stock}}</td>
-                        <td>{{$product->price}}</td>
-                    </tr>
-                @endforeach
+                <form method="post" action="/products/del">
+                    @csrf
+                    @foreach($products as $product)
+                        <tr>
+                            <td>{{$product->productName}}</td>
+                            <td>{{$product->stock}}</td>
+                            <td>{{$product->price}}</td>
+                            <td><button name="del" value="{{$product->id}}">Supprimer</button></td>
+                        </tr>
+                    @endforeach
+                </form>
             </table>
         </div>
     </div>

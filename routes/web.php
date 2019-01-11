@@ -101,5 +101,6 @@ Route::view('/', 'welcome');
 Route::view('/docApi', 'docApi');
 Route::view('/admin', 'admin');
 Route::get('/products', 'AdminController@indexProducts');
+Route::post('/products/del', 'AdminController@del');
 Route::get('/providers', 'AdminController@indexProviders');
 
