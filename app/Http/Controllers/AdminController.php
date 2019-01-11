@@ -36,4 +36,18 @@ class AdminController extends Controller
         $delProviders->delete();
         return redirect('providers');
     }
+
+    public function addProviders(Request $add)
+    {
+        $addProvider = new Users();
+        $addProvider->lastName = $add->lastname;
+        $addProvider->firstName = $add->firstname;
+        $addProvider->companyName = $add->company;
+        $addProvider->phone = $add->phone;
+        $addProvider->address = $add->address;
+        $addProvider->userType = $add->providerType;
+        $addProvider->location_id = 1;
+        $addProvider->save();
+        return redirect('providers');
+    }
 }
