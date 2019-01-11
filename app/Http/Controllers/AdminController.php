@@ -17,7 +17,7 @@ class AdminController extends Controller
         return view('products')->with('products', $products);
     }
 
-    public function del(Request $delete)
+    public function delProducts(Request $delete)
     {
         $delProducts = Products::find($delete->del);
         $delProducts->delete();
@@ -28,5 +28,12 @@ class AdminController extends Controller
     {
         $fournisseurs = Users::all();
         return view('providers')->with('fournisseurs', $fournisseurs);
+    }
+
+    public function delProviders(Request $delete)
+    {
+        $delProviders = Users::find($delete->del);
+        $delProviders->delete();
+        return redirect('providers');
     }
 }
