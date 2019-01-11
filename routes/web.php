@@ -99,5 +99,7 @@ Route::get('/api/v1/orders', function (Request $request) {
 
 Route::view('/', 'welcome');
 Route::view('/docApi', 'docApi');
-Route::get('/admin', 'AdminController@index');
+Route::view('/admin', 'admin');
+Route::get('/products', 'AdminController@indexProducts');
+Route::get('/providers', 'AdminController@indexProviders');
 
