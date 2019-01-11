@@ -5,7 +5,7 @@
             <div class="title m-b-md">
                 Vedjserver
             </div>
-            
+
             <div class="links">
                 <a href="/">Accueil</a>
             </div>
