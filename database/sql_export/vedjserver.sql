@@ -15,6 +15,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+CREATE SCHEMA IF NOT EXISTS vedjiserver;
+USE vedjiserver;
+
 --
 -- Table structure for table `locations`
 --
@@ -116,9 +119,9 @@ CREATE TABLE `product_supplier` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '	',
   KEY `product_id` (`product_id`),
   KEY `supplier_id` (`supplier_id`),
-  CONSTRAINT `product_supplier_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `product_supplier_ibfk_2` FOREIGN KEY (`supplier_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `product_supplier_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `vedjiserver`.`products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `product_supplier_ibfk_2` FOREIGN KEY (`supplier_id`) REFERENCES `vedjiserver`.`users` (`id`) ON DELETE CASCADE
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
