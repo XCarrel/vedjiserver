@@ -18,14 +18,18 @@
                     <th>Entreprise</th>
                     <th>Téléphone</th>
                 </tr>
-                @foreach($fournisseurs as $fournisseur)
-                    <tr>
-                        <td>{{$fournisseur->firstName}}</td>
-                        <td>{{$fournisseur->lastName}}</td>
-                        <td>{{$fournisseur->companyName}}</td>
-                        <td>{{$fournisseur->phone}}</td>
-                    </tr>
-                @endforeach
+                <form method="post" action="/providers/del">
+                    @csrf
+                    @foreach($fournisseurs as $fournisseur)
+                        <tr>
+                            <td>{{$fournisseur->firstName}}</td>
+                            <td>{{$fournisseur->lastName}}</td>
+                            <td>{{$fournisseur->companyName}}</td>
+                            <td>{{$fournisseur->phone}}</td>
+                            <td><button name="del" value="{{$fournisseur->id}}">Supprimer</button></td>
+                        </tr>
+                    @endforeach
+                </form>
             </table>
         </div>
     </div>
