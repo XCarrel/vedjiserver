@@ -207,14 +207,28 @@ CREATE TABLE `users` (
   `phone` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `location_id` int(11) NOT NULL,
-  `userType` int(11) NOT NULL DEFAULT '0' COMMENT '0: Customer\n1: Admin\n2: Delivery\n3: Supplier (of vegetables)',
+  `userType_id` int(11),
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `location_idx` (`location_id`),
-  CONSTRAINT `location` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `location` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `userType`  FOREIGN KEY (`userType_id`)  REFERENCES `userTypes` (`id`)  ON DELETE NO ACTION  ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+DROP TABLE IF EXISTS `userTypes`;
+CREATE TABLE IF NOT EXISTS `vedjiserver`.`userTypes` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+INSERT INTO `userTypes` (`name`) VALUES ('Client');
+INSERT INTO `userTypes` (`name`) VALUES ('Administrateur');
+INSERT INTO `userTypes` (`name`) VALUES ('Livraison');
+INSERT INTO `userTypes` (`name`) VALUES ('Fournisseur');
 
 --
 -- Dumping data for table `users`
@@ -222,7 +236,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Louis','Corbaz','Corbaz','0123456','Ch. du chêne 8',1,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(2,'Charles','Dumont','Dumont','2346282','Ch. du peuplier 12',1,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,'Hector','Despraz','Despraz','76235472','Ch. du cerisier 22',1,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(4,'Paul','Pasche','Pasche','45642','Ch. des Lilas 1',1,3,'2018-05-23 09:35:14','2018-05-23 09:35:14');
+INSERT INTO `users` VALUES (1,'Louis','Corbaz','Corbaz','0123456','Ch. du chêne 8',1,4,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(2,'Charles','Dumont','Dumont','2346282','Ch. du peuplier 12',1,4,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,'Hector','Despraz','Despraz','76235472','Ch. du cerisier 22',1,4,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(4,'Paul','Pasche','Pasche','45642','Ch. des Lilas 1',1,4,'2018-05-23 09:35:14','2018-05-23 09:35:14');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
