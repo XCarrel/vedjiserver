@@ -7,6 +7,7 @@ use App\User;
 use App\user_types;
 use App\Users;
 use App\UserTypes;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -46,7 +47,13 @@ class AdminController extends Controller
         $addProvider->productName = $add->product;
         $addProvider->stock = $add->stock;
         $addProvider->price = $add->price;
-        $image = base64_encode(file_get_contents($add->picture->path()));
+        $image = base64_encode(file_get_contents($add->picture));
+
+        $file_data = $add->picture;
+        $file_name = 'image_' . time() . '.png'; //generating unique file name;
+
+        $addProvider->picture = $file_name.base64_decode($file_data);
+
         $addProvider->picture = $image;
         $addProvider->save();
         return redirect('products');
