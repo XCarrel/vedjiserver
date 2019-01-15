@@ -50,4 +50,24 @@ class AdminController extends Controller
         $addProvider->save();
         return redirect('providers');
     }
+
+    public function updateProviders(Request $update)
+    {
+        $updateProviders = Users::find($update->update);
+        return view('update')->with('data', $updateProviders);
+    }
+
+    public function updateDataProviders(Request $updateData)
+    {
+        $updateDataProviders = Users::find($updateData->btnUpdate);
+        $updateDataProviders->lastName = $updateData->updateLastname;
+        $updateDataProviders->firstName = $updateData->updateFirstname;
+        $updateDataProviders->companyName = $updateData->updateCompany;
+        $updateDataProviders->phone = $updateData->updatePhone;
+        $updateDataProviders->address = $updateData->updateAddress;
+        $updateDataProviders->userType = $updateData->updateProviderType;
+        $updateDataProviders->location_id = 1;
+        $updateDataProviders->save();
+        return redirect('providers');
+    }
 }
