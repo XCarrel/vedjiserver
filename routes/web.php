@@ -101,10 +101,13 @@ Route::view('/', 'welcome');
 Route::view('/docApi', 'docApi');
 Route::view('/admin', 'admin');
 Route::get('/products', 'AdminController@indexProducts');
-Route::post('/products/del', 'AdminController@delProducts');
 Route::get('/providers', 'AdminController@indexProviders');
+Route::post('/products/del', 'AdminController@delProducts');
 Route::post('/providers/del', 'AdminController@delProviders');
+Route::post('/products/add', 'AdminController@addProducts');
 Route::post('/providers/add', 'AdminController@addProviders');
-Route::post('/providers/update', 'AdminController@updateProviders');
-Route::post('/providers/updateData', 'AdminController@updateDataProviders');
+Route::post('/products/updateProduct', 'AdminController@updateProducts');
+Route::post('/providers/updateProvider', 'AdminController@updateProviders');
+Route::post('/providers/updateDataProvider', 'AdminController@updateDataProviders');
+Route::post('/products/updateDataProducts', 'AdminController@updateDataProducts');
 

@@ -40,6 +40,18 @@ class AdminController extends Controller
         return redirect('providers');
     }
 
+    public function addProducts(Request $add)
+    {
+        $addProvider = new Products();
+        $addProvider->productName = $add->product;
+        $addProvider->stock = $add->stock;
+        $addProvider->price = $add->price;
+        $image = base64_encode(file_get_contents($add->picture->path()));
+        $addProvider->picture = $image;
+        $addProvider->save();
+        return redirect('products');
+    }
+
     public function addProviders(Request $add)
     {
         $addProvider = new Users();
@@ -54,11 +66,27 @@ class AdminController extends Controller
         return redirect('providers');
     }
 
+    public function updateProducts(Request $update)
+    {
+        $updateProducts = Products::find($update->update);
+        return view('updateProduct')->with('data', $updateProducts);
+    }
+
     public function updateProviders(Request $update)
     {
         $updateProviders = Users::find($update->update);
         $userTypes = user_types::all();
-        return view('update')->with('data', $updateProviders)->with('userTypes', $userTypes);
+        return view('updateProvider')->with('data', $updateProviders)->with('userTypes', $userTypes);
+    }
+
+    public function updateDataProducts(Request $updateData)
+    {
+        $updateDataProviders = Products::find($updateData->btnUpdate);
+        $updateDataProviders->productName = $updateData->updateName;
+        $updateDataProviders->stock = $updateData->updateStok;
+        $updateDataProviders->price = $updateData->updatePrice;
+        $updateDataProviders->save();
+        return redirect('products');
     }
 
     public function updateDataProviders(Request $updateData)
@@ -69,7 +97,7 @@ class AdminController extends Controller
         $updateDataProviders->companyName = $updateData->updateCompany;
         $updateDataProviders->phone = $updateData->updatePhone;
         $updateDataProviders->address = $updateData->updateAddress;
-        $updateDataProviders->userType = $updateData->updateProviderType;
+        $updateDataProviders->userType_id = $updateData->updateProviderType;
         $updateDataProviders->location_id = 1;
         $updateDataProviders->save();
         return redirect('providers');
