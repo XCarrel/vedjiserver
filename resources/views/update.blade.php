@@ -32,10 +32,9 @@
                             <div class="form-group">
                                 <label for="description">Type de fournisseur</label>
                                 <select class="form-control" name="updateProviderType">
-                                    <option value='0'>Client</option>
-                                    <option value='1'>Administrateur</option>
-                                    <option value='2'>Livraison</option>
-                                    <option value='3'>Fournisseur</option>
+                                    @foreach($userTypes as $userType)
+                                        <option value='{{$userType->id}}' {{$data->userType_id == $userType->id ? "selected" : "" }}>{{$userType->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
