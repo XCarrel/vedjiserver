@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Products;
 use App\User;
 use App\Users;
+use App\UserTypes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -27,7 +28,8 @@ class AdminController extends Controller
     public function indexProviders()
     {
         $fournisseurs = Users::all();
-        return view('providers')->with('fournisseurs', $fournisseurs);
+        $userTypes = UserTypes::all();
+        return view('providers')->with('fournisseurs', $fournisseurs)->with('userTypes', $userTypes);
     }
 
     public function delProviders(Request $delete)
@@ -45,7 +47,7 @@ class AdminController extends Controller
         $addProvider->companyName = $add->company;
         $addProvider->phone = $add->phone;
         $addProvider->address = $add->address;
-        $addProvider->userType = $add->providerType;
+        $addProvider->userType_id = $add->providerType;
         $addProvider->location_id = 1;
         $addProvider->save();
         return redirect('providers');
@@ -54,7 +56,8 @@ class AdminController extends Controller
     public function updateProviders(Request $update)
     {
         $updateProviders = Users::find($update->update);
-        return view('update')->with('data', $updateProviders);
+        $userTypes = UserTypes::all();
+        return view('update')->with('data', $updateProviders)->with('userTypes', $userTypes);
     }
 
     public function updateDataProviders(Request $updateData)
