@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Products;
 use App\User;
+use App\user_types;
 use App\Users;
 use App\UserTypes;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class AdminController extends Controller
     public function indexProviders()
     {
         $fournisseurs = Users::all();
-        $userTypes = UserTypes::all();
+        $userTypes = user_types::all();
         return view('providers')->with('fournisseurs', $fournisseurs)->with('userTypes', $userTypes);
     }
 
@@ -56,7 +57,7 @@ class AdminController extends Controller
     public function updateProviders(Request $update)
     {
         $updateProviders = Users::find($update->update);
-        $userTypes = UserTypes::all();
+        $userTypes = user_types::all();
         return view('update')->with('data', $updateProviders)->with('userTypes', $userTypes);
     }
 
