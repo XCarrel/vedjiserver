@@ -32,7 +32,7 @@
                             </form>
                         </td>
                         <td>
-                            <form method="post" action="/providers/update">
+                            <form method="post" action="/providers/updateProvider">
                             @csrf
                                 <button name="update" value="{{$fournisseur->id}}" class="btn btn-warning">Modifier</button>
                             </form>
