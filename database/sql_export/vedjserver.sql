@@ -213,22 +213,22 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `location_idx` (`location_id`),
   CONSTRAINT `location` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `userType`  FOREIGN KEY (`userType_id`)  REFERENCES `userTypes` (`id`)  ON DELETE NO ACTION  ON UPDATE NO ACTION
+  CONSTRAINT `user_type`  FOREIGN KEY (`userType_id`)  REFERENCES `user_types` (`id`)  ON DELETE NO ACTION  ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-DROP TABLE IF EXISTS `userTypes`;
-CREATE TABLE IF NOT EXISTS `vedjiserver`.`userTypes` (
+DROP TABLE IF EXISTS `user_types`;
+CREATE TABLE IF NOT EXISTS `user_types` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-INSERT INTO `userTypes` (`name`) VALUES ('Client');
-INSERT INTO `userTypes` (`name`) VALUES ('Administrateur');
-INSERT INTO `userTypes` (`name`) VALUES ('Livraison');
-INSERT INTO `userTypes` (`name`) VALUES ('Fournisseur');
+INSERT INTO `user_types` (`name`) VALUES ('Client');
+INSERT INTO `user_types` (`name`) VALUES ('Administrateur');
+INSERT INTO `user_types` (`name`) VALUES ('Livraison');
+INSERT INTO `user_types` (`name`) VALUES ('Fournisseur');
 
 --
 -- Dumping data for table `users`
