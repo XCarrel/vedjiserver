@@ -71,7 +71,6 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="file" id="my_file" name="picture">
-                                    <div id="customfileupload">Select a file</div>
                                 </div>
                             </div>
                             <div class="modal-footer">
