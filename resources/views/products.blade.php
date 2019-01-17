@@ -66,6 +66,14 @@
                                     <input type="text" class="form-control" name="stock" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="description">Unité</label>
+                                    <select class="form-control" name="selectUnit" required>
+                                        @foreach($units as $unit)
+                                            <option value='{{$unit->id}}'>{{$unit->unitName}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="title">Prix</label>
                                     <input type="text" class="form-control" name="price" required>
                                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Products;
+use App\units;
 use App\User;
 use App\user_types;
 use App\Users;
@@ -17,7 +18,8 @@ class AdminController extends Controller
     public function indexProducts()
     {
         $products = Products::all();
-        return view('products')->with('products', $products);
+        $units = units::all();
+        return view('products')->with('products', $products)->with('units', $units);
     }
 
     public function delProducts(Request $delete)
@@ -47,9 +49,16 @@ class AdminController extends Controller
         $addProvider->productName = $add->product;
         $addProvider->stock = $add->stock;
         $addProvider->price = $add->price;
+        $addProvider->unit_id = $add->selectUnit;
 
-        $base64 = base64_encode($add->picture);
-        $addProvider->picture = $base64;
+
+        $img = file_get_contents($add->picture);
+        $data = base64_encode($img);
+        $addProvider->picture = $data;
+
+
+        /*$base64 = base64_encode($add->picture);
+        $addProvider->picture = $base64;*/
 
         $addProvider->save();
         return redirect('products');
