@@ -45,18 +45,16 @@ class AdminController extends Controller
 
     public function addProducts(Request $add)
     {
-        $addProvider = new Products();
-        $addProvider->productName = $add->product;
-        $addProvider->stock = $add->stock;
-        $addProvider->price = $add->price;
-        $addProvider->unit_id = $add->selectUnit;
-
+        $addProduct = new Products();
+        $addProduct->productName = $add->product;
+        $addProduct->stock = $add->stock;
+        $addProduct->price = $add->price;
+        $addProduct->unit_id = $add->selectUnit;
         $filename = $_FILES['picture']['name'];
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         $base64 = base64_encode(file_get_contents($add->picture));
-        $addProvider->picture = "data:image/".$ext.";base64,".$base64;
-
-        $addProvider->save();
+        $addProduct->picture = "data:image/".$ext.";base64,".$base64;
+        $addProduct->save();
         return redirect('products');
     }
 
