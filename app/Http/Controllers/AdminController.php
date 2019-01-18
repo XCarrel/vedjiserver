@@ -75,7 +75,8 @@ class AdminController extends Controller
     public function updateProducts(Request $update)
     {
         $updateProducts = Products::find($update->update);
-        return view('updateProduct')->with('data', $updateProducts);
+        $units = units::all();
+        return view('updateProduct')->with('data', $updateProducts)->with('units', $units);
     }
 
     public function updateProviders(Request $update)

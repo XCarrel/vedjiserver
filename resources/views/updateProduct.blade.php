@@ -23,6 +23,14 @@
                                     <label for="title">Prix</label>
                                     <input type="text" class="form-control" name="updatePrice" value='{{$data->price}}'>
                                 </div>
+                                <div class="form-group">
+                                    <label for="description">Unité</label>
+                                    <select class="form-control" name="updateUnit">
+                                        @foreach($units as $unit)
+                                            <option value='{{$unit->id}}' {{$unit->id == $data->unit_id ? "selected" : "" }}>{{$unit->unitName}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <a href="/products"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button> </a>
