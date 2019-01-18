@@ -51,14 +51,10 @@ class AdminController extends Controller
         $addProvider->price = $add->price;
         $addProvider->unit_id = $add->selectUnit;
 
-
-        $img = file_get_contents($add->picture);
-        $data = base64_encode($img);
-        $addProvider->picture = $data;
-
-
-        /*$base64 = base64_encode($add->picture);
-        $addProvider->picture = $base64;*/
+        $filename = $_FILES['picture']['name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        $base64 = base64_encode(file_get_contents($add->picture));
+        $addProvider->picture = "data:image/".$ext.";base64,".$base64;
 
         $addProvider->save();
         return redirect('products');
