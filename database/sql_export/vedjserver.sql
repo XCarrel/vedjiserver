@@ -213,7 +213,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `location_idx` (`location_id`),
   CONSTRAINT `location` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `user_type`  FOREIGN KEY (`userType_id`)  REFERENCES `user_types` (`id`)  ON DELETE NO ACTION  ON UPDATE NO ACTION
+  CONSTRAINT `user_types`  FOREIGN KEY (`userType_id`)  REFERENCES `user_types` (`id`)  ON DELETE NO ACTION  ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
