@@ -23,6 +23,7 @@
                             <td>{{$product->productName}}</td>
                             <td>{{$product->stock}}</td>
                             <td>{{$product->price}}</td>
+                            <td>{{$unit->unitName}}</td>
                             <td>
                                 <form method="post" action="/products/del">
                                     @csrf

@@ -19,7 +19,10 @@ class AdminController extends Controller
     {
         $products = Products::all();
         $units = units::all();
-        return view('products')->with('products', $products)->with('units', $units);
+
+        dd(Products::all());
+
+        return view('products')->with('products', $products)->with('units', $units)->with('unit', $unit);
     }
 
     public function delProducts(Request $delete)
