@@ -17,12 +17,12 @@ class AdminController extends Controller
 {
     public function indexProducts()
     {
-        $products = Products::all();
+        $products = Products::with('units')->get();
         $units = units::all();
 
-        dd(Products::all());
+        dd($products);
 
-        return view('products')->with('products', $products)->with('units', $units)->with('unit', $unit);
+        return view('products')->with('products', $products)->with('units', $units)->with('unit', $units);
     }
 
     public function delProducts(Request $delete)

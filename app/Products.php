@@ -13,8 +13,8 @@ class Products extends Model
      */
     protected $fillable = ['id', 'productName', 'stock', 'price', 'picture'];
 
-    public function test()
+    public function units()
     {
-        return $this->hasOne('App\Units');
+        return $this->belongsTo('App\units');
     }
 }
