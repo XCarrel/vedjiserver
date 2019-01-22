@@ -84,7 +84,7 @@
                                     <input type="text" class="form-control" name="price" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="file" id="my_file" name="picture">
+                                    <input type="file" name="picture">
                                 </div>
                             </div>
                             <div class="modal-footer">
