@@ -11,10 +11,10 @@ class Products extends Model
      *
      * @var array
      */
-    protected $fillable = ['id', 'productName', 'stock', 'price', 'picture'];
+    protected $fillable = ['id', 'productName', 'stock', 'price', 'picture', 'unit_id'];
 
     public function units()
     {
-        return $this->belongsTo('App\units');
+        return $this->belongsTo('App\units', 'unit_id');
     }
 }

@@ -16,6 +16,7 @@
                     <th>Produits</th>
                     <th>Stock</th>
                     <th>Prix</th>
+                    <th>Unité</th>
                 </tr>
 
                     @foreach($products as $product)
@@ -23,7 +24,7 @@
                             <td>{{$product->productName}}</td>
                             <td>{{$product->stock}}</td>
                             <td>{{$product->price}}</td>
-                            <td>{{$product->test()}}</td>
+                            <td>{{$product->units->unitName}}</td>
                             <td>
                                 <form method="post" action="/products/del">
                                     @csrf

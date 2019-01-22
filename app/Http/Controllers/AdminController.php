@@ -17,12 +17,9 @@ class AdminController extends Controller
 {
     public function indexProducts()
     {
-        $products = Products::with('units')->get();
+        $products = Products::all();
         $units = units::all();
-
-        dd($products);
-
-        return view('products')->with('products', $products)->with('units', $units)->with('unit', $units);
+        return view('products')->with('products', $products)->with('units', $units);
     }
 
     public function delProducts(Request $delete)
@@ -95,6 +92,7 @@ class AdminController extends Controller
         $updateDataProviders->productName = $updateData->updateName;
         $updateDataProviders->stock = $updateData->updateStok;
         $updateDataProviders->price = $updateData->updatePrice;
+        $updateDataProviders->unit_id = $updateData->updateUnit;
         $updateDataProviders->save();
         return redirect('products');
     }
