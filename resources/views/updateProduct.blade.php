@@ -34,6 +34,11 @@
                                 <div class="form-group">
                                     <input type="file" name="updatePicture">
                                 </div>
+                                <div class="form-group form-check">
+                                    @foreach($users as $user)
+                                        <input type="checkbox" class="form-check-input" name="choiceProvider" value="{{$user->id}}"> {{$user->firstName}} {{$user->lastName}} <br>
+                                    @endforeach
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <a href="/products"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button> </a>
