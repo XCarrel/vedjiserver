@@ -6,17 +6,18 @@
                 Administration des produits
             </div>
 
-            <div class="links">
+            <div class="links" style="padding-bottom: 30px;">
                 <a href="/">Accueil</a>
                 <a href="/admin">Administration</a>
             </div>
 
-            <table class="flex-center" style="padding-top: 20px;">
+            <table class="table table-striped table-hover">
                 <tr>
                     <th>Produits</th>
                     <th>Stock</th>
                     <th>Prix</th>
                     <th>Unité</th>
+                    <th colspan="2">Actions</th>
                 </tr>
 
                     @foreach($products as $product)
@@ -39,12 +40,15 @@
                             </td>
                         </tr>
                     @endforeach
+                <tr>
+                    <td colspan="6">
+                        <!-- Button trigger modal -->
+                        <button type="button" style="margin-top:20px" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+                            Ajouter un produit
+                        </button>
+                    </td>
+                </tr>
             </table>
-
-            <!-- Button trigger modal -->
-            <button type="button" style="margin-top:20px" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
-                Ajouter un produit
-            </button>
 
             <!-- Modal -->
             <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

@@ -6,17 +6,18 @@
                 Administration des fournisseurs
             </div>
 
-            <div class="links">
+            <div class="links" style="padding-bottom: 30px;">
                 <a href="/">Accueil</a>
                 <a href="/admin">Administration</a>
             </div>
 
-            <table class="flex-center" style="padding-top: 20px;">
+            <table class="table table-striped table-hover">
                 <tr>
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Entreprise</th>
                     <th>Téléphone</th>
+                    <th colspan="2">Actions</th>
                 </tr>
 
                 @foreach($fournisseurs as $fournisseur)
