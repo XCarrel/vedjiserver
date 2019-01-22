@@ -5,7 +5,7 @@
             <div class="flex-center">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <form method="post" action="/products/updateDataProducts">
+                        <form method="post" action="/products/updateDataProducts" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalCenterTitle">Modifier {{$data->productName}}</h5>
@@ -30,6 +30,9 @@
                                             <option value='{{$unit->id}}' {{$unit->id == $data->unit_id ? "selected" : "" }}>{{$unit->unitName}}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name="updatePicture">
                                 </div>
                             </div>
                             <div class="modal-footer">

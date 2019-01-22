@@ -93,6 +93,10 @@ class AdminController extends Controller
         $updateDataProviders->stock = $updateData->updateStok;
         $updateDataProviders->price = $updateData->updatePrice;
         $updateDataProviders->unit_id = $updateData->updateUnit;
+        $filename = $_FILES['updatePicture']['name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        $base64 = base64_encode(file_get_contents($updateData->updatePicture));
+        $updateDataProviders->picture = "data:image/".$ext.";base64,".$base64;
         $updateDataProviders->save();
         return redirect('products');
     }
