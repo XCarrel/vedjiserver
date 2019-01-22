@@ -109,10 +109,10 @@ UNLOCK TABLES;
 -- Table structure for table `product_supplier`
 --
 
-DROP TABLE IF EXISTS `product_supplier`;
+DROP TABLE IF EXISTS `product_suppliers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `product_supplier` (
+CREATE TABLE `product_suppliers` (
   `product_id` int(11) NOT NULL,
   `supplier_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -128,10 +128,10 @@ CREATE TABLE `product_supplier` (
 -- Dumping data for table `product_supplier`
 --
 
-LOCK TABLES `product_supplier` WRITE;
-/*!40000 ALTER TABLE `product_supplier` DISABLE KEYS */;
-INSERT INTO `product_supplier` VALUES (1,1,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(1,2,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(1,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(1,4,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(2,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(2,2,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,1,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,2,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,3,'2018-05-23 09:35:14','2018-05-23 09:35:14');
-/*!40000 ALTER TABLE `product_supplier` ENABLE KEYS */;
+LOCK TABLES `product_suppliers` WRITE;
+/*!40000 ALTER TABLE `product_suppliers` DISABLE KEYS */;
+INSERT INTO `product_suppliers` VALUES (1,1,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(1,2,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(1,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(1,4,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(2,3,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(2,2,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,1,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,2,'2018-05-23 09:35:14','2018-05-23 09:35:14'),(3,3,'2018-05-23 09:35:14','2018-05-23 09:35:14');
+/*!40000 ALTER TABLE `product_suppliers` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -218,7 +218,7 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 DROP TABLE IF EXISTS `user_types`;
-CREATE TABLE IF NOT EXISTS `user_types` (
+CREATE TABLE IF NOT EXISTS `vedjiserver`.`user_types` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
