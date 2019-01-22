@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\product_supplier;
 use App\Products;
 use App\units;
 use App\User;
@@ -89,16 +90,28 @@ class AdminController extends Controller
 
     public function updateDataProducts(Request $updateData)
     {
+        //dd($updateData);
         $updateDataProviders = Products::find($updateData->btnUpdate);
         $updateDataProviders->productName = $updateData->updateName;
         $updateDataProviders->stock = $updateData->updateStok;
         $updateDataProviders->price = $updateData->updatePrice;
         $updateDataProviders->unit_id = $updateData->updateUnit;
-        $filename = $_FILES['updatePicture']['name'];
-        $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        $base64 = base64_encode(file_get_contents($updateData->updatePicture));
-        $updateDataProviders->picture = "data:image/".$ext.";base64,".$base64;
+        if(isset($_FILES['updatePicture']['name']))
+        {
+            $filename = $_FILES['updatePicture']['name'];
+            $ext = pathinfo($filename, PATHINFO_EXTENSION);
+            $base64 = base64_encode(file_get_contents($updateData->updatePicture));
+            $updateDataProviders->picture = "data:image/".$ext.";base64,".$base64;
+        }
         $updateDataProviders->save();
+
+        $selectProviders = new product_supplier();
+        foreach($updateData->selectProviders as $selectedP)
+        {
+            $selectProviders->product_id = $updateData->btnUpdate;
+            $selectProviders->supplier_id = $selectedP;
+        }
+        $selectProviders->save();
         return redirect('products');
     }
 
