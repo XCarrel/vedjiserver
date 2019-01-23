@@ -105,13 +105,13 @@ class AdminController extends Controller
         }
         $updateDataProviders->save();
 
-        $selectProviders = new product_supplier();
         foreach($updateData->selectProviders as $selectedP)
         {
+            $selectProviders = new product_supplier();
             $selectProviders->product_id = $updateData->btnUpdate;
             $selectProviders->supplier_id = $selectedP;
+            $selectProviders->save();
         }
-        $selectProviders->save();
         return redirect('products');
     }
 
