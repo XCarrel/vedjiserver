@@ -75,10 +75,11 @@ class AdminController extends Controller
 
     public function updateProducts(Request $update)
     {
+        $provider = product_supplier::all();
         $updateProducts = Products::find($update->update);
         $units = units::all();
         $users = Users::all();
-        return view('updateProduct')->with('data', $updateProducts)->with('units', $units)->with('users', $users);
+        return view('updateProduct')->with('data', $updateProducts)->with('units', $units)->with('users', $users)->with('provider', $provider);
     }
 
     public function updateProviders(Request $update)
@@ -90,7 +91,6 @@ class AdminController extends Controller
 
     public function updateDataProducts(Request $updateData)
     {
-        //dd($updateData);
         $updateDataProviders = Products::find($updateData->btnUpdate);
         $updateDataProviders->productName = $updateData->updateName;
         $updateDataProviders->stock = $updateData->updateStok;
