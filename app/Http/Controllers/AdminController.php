@@ -79,6 +79,7 @@ class AdminController extends Controller
         $updateProduct = Products::find($update->update);
         $units = units::all();
         $users = Users::all();
+        $array = array();
         foreach($users as $user)
         {
             foreach($providers as $provider)
@@ -86,14 +87,17 @@ class AdminController extends Controller
                 if($user->id == $provider->supplier_id)
                 {   
                     $user->provides = true;
+                    array_push($array, $user->provides = true);
                 }
                 else
                 {
                     $user->provides = false;
+                    array_push($array, $user->provides = false);
                 }
             }
         }
-        return view('updateProduct')->with('data', $updateProduct)->with('units', $units)->with('users', $users);
+        //dd($array);
+        return view('updateProduct')->with('data', $updateProduct)->with('units', $units)->with('users', $users)->with('array', $array);
     }
 
     public function updateProviders(Request $update)
