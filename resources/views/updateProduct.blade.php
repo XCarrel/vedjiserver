@@ -3,7 +3,7 @@
     <section id="cover">
         <div id="cover-caption">
             <div id="container" class="container">
-                <div class="row">
+                <div class="row" style="padding-top: 30px;">
                     <div class="col-sm-6 offset-sm-3 text-center">
                         <h3>{{$data->productName}} - Modification</h3>
                         <div class="info-form">
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-check">
                                     @foreach($users as $user)
-                                        <input type="checkbox" class="form-check-input" name="selectProviders[]" value="{{$user->id}}" {{$provider->supplier_id == $user->id ? "checked" : "" }}>{{$user->firstName}} {{$user->lastName}}</input><br>
+                                        <input type="checkbox" class="form-check-input" name="selectProviders[]" value="{{$user->id}}" {{$user->provides ? "checked" : "" }}>{{$user->firstName}} {{$user->lastName}}<br>
                                     @endforeach
                                 </div>
                                 <a href="/products"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button> </a>

@@ -12,4 +12,9 @@ class Users extends Model
      * @var array
      */
     protected $fillable = ['id', 'firstName', 'lastName', 'companyName', 'phone', 'address', 'userType'];
+
+    public function products()
+    {
+        return $this->belongsToMany('App\Products', 'product_supplier', 'supplier_id', 'product_id');
+    }
 }

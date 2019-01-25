@@ -75,11 +75,25 @@ class AdminController extends Controller
 
     public function updateProducts(Request $update)
     {
-        $provider = product_supplier::all();
-        $updateProducts = Products::find($update->update);
+        $providers = product_supplier::where('product_id', '=', $update->update)->get();
+        $updateProduct = Products::find($update->update);
         $units = units::all();
         $users = Users::all();
-        return view('updateProduct')->with('data', $updateProducts)->with('units', $units)->with('users', $users)->with('provider', $provider);
+        foreach($users as $user)
+        {
+            foreach($providers as $provider)
+            {
+                if($user->id == $provider->supplier_id)
+                {   
+                    $user->provides = true;
+                }
+                else
+                {
+                    $user->provides = false;
+                }
+            }
+        }
+        return view('updateProduct')->with('data', $updateProduct)->with('units', $units)->with('users', $users);
     }
 
     public function updateProviders(Request $update)
