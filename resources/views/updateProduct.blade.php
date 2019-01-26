@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-check">
                                     @foreach($users as $user)
-                                        <input type="checkbox" class="form-check-input" name="selectProviders[]" value="{{$user->id}}" {{$array ? "checked" : "" }}>{{$user->firstName}} {{$user->lastName}}<br>
+                                        <input type="checkbox" class="form-check-input" name="selectProviders[]" value="{{$user->id}}" {{$user->provides ? "checked" : "" }}>{{$user->firstName}} {{$user->lastName}}<br>
                                     @endforeach
                                 </div>
                                 <a href="/products"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button> </a>
