@@ -5,14 +5,10 @@ namespace App\Http\Controllers;
 use App\product_supplier;
 use App\Products;
 use App\units;
-use App\User;
 use App\user_types;
 use App\Users;
 use App\UserTypes;
-use Illuminate\Http\File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -75,28 +71,25 @@ class AdminController extends Controller
 
     public function updateProducts(Request $update)
     {
-        $providers = product_supplier::where('product_id', '=', $update->update)->get();
         $updateProduct = Products::find($update->update);
         $units = units::all();
         $users = Users::all();
         $array = array();
         foreach($users as $user)
         {
+            $providers = product_supplier::where('supplier_id', '=', $user->id)->where('product_id', '=', $update->update)->get();
             foreach($providers as $provider)
             {
                 if($user->id == $provider->supplier_id)
                 {   
                     $user->provides = true;
-                    array_push($array, $user->provides = true);
                 }
                 else
                 {
                     $user->provides = false;
-                    array_push($array, $user->provides = false);
                 }
             }
         }
-        //dd($array);
         return view('updateProduct')->with('data', $updateProduct)->with('units', $units)->with('users', $users)->with('array', $array);
     }
 
@@ -114,7 +107,7 @@ class AdminController extends Controller
         $updateDataProviders->stock = $updateData->updateStok;
         $updateDataProviders->price = $updateData->updatePrice;
         $updateDataProviders->unit_id = $updateData->updateUnit;
-        if(isset($_FILES['updatePicture']['name']))
+        if($updateData->has('updatePicture'))
         {
             $filename = $_FILES['updatePicture']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -123,13 +116,19 @@ class AdminController extends Controller
         }
         $updateDataProviders->save();
 
-        foreach($updateData->selectProviders as $selectedP)
+        if($updateData->has('selectProviders'))
         {
-            $selectProviders = new product_supplier();
-            $selectProviders->product_id = $updateData->btnUpdate;
-            $selectProviders->supplier_id = $selectedP;
-            $selectProviders->save();
+            product_supplier::where('product_id', '=', $updateData->btnUpdate)->delete();
+
+            foreach($updateData->selectProviders as $selectedP)
+            {
+                $selectProviders = new product_supplier();
+                $selectProviders->product_id = $updateData->btnUpdate;
+                $selectProviders->supplier_id = $selectedP;
+                $selectProviders->save();
+            }
         }
+
         return redirect('products');
     }
 
