@@ -40,15 +40,12 @@
                             </td>
                         </tr>
                     @endforeach
-                <tr>
-                    <td colspan="6">
-                        <!-- Button trigger modal -->
-                        <button type="button" style="margin-top:20px" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
-                            Ajouter un produit
-                        </button>
-                    </td>
-                </tr>
             </table>
+            
+             <!-- Button trigger modal -->
+             <button type="button" style="margin-top:20px" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+                Ajouter un produit
+            </button>
 
             <!-- Modal -->
             <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
