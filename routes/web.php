@@ -100,14 +100,16 @@ Route::get('/api/v1/orders', function (Request $request) {
 Route::view('/', 'welcome');
 Route::view('/docApi', 'docApi');
 Route::view('/admin', 'admin');
-Route::get('/products', 'AdminController@indexProducts');
+
+Route::get('/products', 'AdminProducts@index');
+Route::post('/products/add', 'AdminProducts@add');
+Route::post('/products/delete', 'AdminProducts@delete');
+Route::post('/products/getProducts', 'AdminProducts@getProducts');
+Route::post('/products/update', 'AdminProducts@update');
+
 Route::get('/providers', 'AdminController@indexProviders');
-Route::post('/products/del', 'AdminController@delProducts');
 Route::post('/providers/del', 'AdminController@delProviders');
-Route::post('/products/add', 'AdminController@addProducts');
 Route::post('/providers/add', 'AdminController@addProviders');
-Route::post('/products/updateProduct', 'AdminController@updateProducts');
 Route::post('/providers/updateProvider', 'AdminController@updateProviders');
 Route::post('/providers/updateDataProvider', 'AdminController@updateDataProviders');
-Route::post('/products/updateDataProducts', 'AdminController@updateDataProducts');
 
