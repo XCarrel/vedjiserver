@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class AdminProducts extends Controller
 {
-    // Show the products in the view products
+    // Show all the products in the view products
     public function index()
     {
         $products = Products::all();
