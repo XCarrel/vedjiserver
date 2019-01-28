@@ -7,7 +7,7 @@
                     <div class="col-sm-6 offset-sm-3 text-center">
                         <h3>{{$data->productName}} - Modification</h3>
                         <div class="info-form">
-                            <form method="post" action="/products/updateDataProducts" enctype="multipart/form-data" class="form-inlin justify-content-center">
+                            <form method="post" action="/products/update" enctype="multipart/form-data" class="form-inlin justify-content-center">
                                 @csrf
                                 <div class="form-group">
                                     <label for="title">Produit</label>

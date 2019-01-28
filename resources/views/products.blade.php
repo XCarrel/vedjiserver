@@ -27,13 +27,13 @@
                             <td>{{$product->price}}</td>
                             <td>{{$product->units->unitName}}</td>
                             <td>
-                                <form method="post" action="/products/del">
+                                <form method="post" action="/products/delete">
                                     @csrf
                                     <button name="del" value="{{$product->id}}" class="btn btn-danger">Supprimer</button>
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="/products/updateProduct">
+                                <form method="post" action="/products/getProducts">
                                     @csrf
                                     <button name="update" value="{{$product->id}}" class="btn btn-warning">Modifier</button>
                                 </form>
