@@ -107,9 +107,9 @@ Route::post('/products/delete', 'AdminProducts@delete');
 Route::post('/products/getProducts', 'AdminProducts@getProducts');
 Route::post('/products/update', 'AdminProducts@update');
 
-Route::get('/providers', 'AdminController@indexProviders');
-Route::post('/providers/del', 'AdminController@delProviders');
-Route::post('/providers/add', 'AdminController@addProviders');
-Route::post('/providers/updateProvider', 'AdminController@updateProviders');
-Route::post('/providers/updateDataProvider', 'AdminController@updateDataProviders');
+Route::get('/providers', 'AdminProviders@index');
+Route::post('/providers/add', 'AdminProviders@add');
+Route::post('/providers/delete', 'AdminProviders@delete');
+Route::post('/providers/getProviders', 'AdminProviders@getProviders');
+Route::post('/providers/update', 'AdminProviders@update');
 

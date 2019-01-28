@@ -8,7 +8,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalCenterTitle">Modifier {{$data->lastName}} {{$data->firstName}}</h5>
                         </div>
-                        <form method="post" action="/providers/updateDataProvider">
+                        <form method="post" action="/providers/update">
                             @csrf
                             <div class="modal-body">
                                 <div class="form-group">
