@@ -27,13 +27,13 @@
                         <td>{{$fournisseur->companyName}}</td>
                         <td>{{$fournisseur->phone}}</td>
                         <td>
-                            <form method="post" action="/providers/del">
+                            <form method="post" action="/providers/delete">
                                 @csrf
                                 <button name="del" value="{{$fournisseur->id}}" class="btn btn-danger">Supprimer</button>
                             </form>
                         </td>
                         <td>
-                            <form method="post" action="/providers/updateProvider">
+                            <form method="post" action="/providers/getProviders">
                             @csrf
                                 <button name="update" value="{{$fournisseur->id}}" class="btn btn-warning">Modifier</button>
                             </form>
