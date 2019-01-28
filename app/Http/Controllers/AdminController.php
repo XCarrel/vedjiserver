@@ -116,6 +116,7 @@ class AdminController extends Controller
         }
         $updateDataProviders->save();
 
+        // TODO: implement a cleaner method
         if($updateData->has('selectProviders'))
         {
             product_supplier::where('product_id', '=', $updateData->btnUpdate)->delete();
