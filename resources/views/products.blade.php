@@ -42,8 +42,8 @@
                     @endforeach
             </table>
             
-             <!-- Button trigger modal -->
-             <button type="button" style="margin-top:20px" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+            <!-- Button trigger modal -->
+            <button type="button" style="margin-top:20px" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
                 Ajouter un produit
             </button>
 
@@ -81,7 +81,7 @@
                                     <input type="text" class="form-control" name="price" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="file" name="picture">
+                                    <input type="file" name="picture" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -92,7 +92,6 @@
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
 @endsection
