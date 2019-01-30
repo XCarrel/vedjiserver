@@ -6,7 +6,6 @@ use App\user_types;
 use App\Users;
 use App\UserTypes;
 use Illuminate\Http\Request;
-use App\Http\Requests\RequestProviders;
 
 class AdminProviders extends Controller
 {
@@ -20,12 +19,20 @@ class AdminProviders extends Controller
     public function showAdd()
     {
         $userTypes = user_types::all();
-        return view('showAdd')->with('userTypes', $userTypes);
+        return view('showAddProvider')->with('userTypes', $userTypes);
     }
 
     // Add a provider in the DB
-    public function add(RequestProviders $addRequest)
+    public function add(Request $addRequest)
     {
+        $validatedData = $addRequest->validate([
+            'lastname' => 'required|min:4|regex:/^[a-zA-Z]*$/',
+            'firstname' => 'required|min:4|regex:/^[a-zA-Z]*$/',
+            'company' => 'required',
+            'address' => 'required',
+            'phone' => 'required|regex:/^[0-9]*$/'
+        ]);
+
         $add = new Users();
         $add->lastName = $addRequest->lastname;
         $add->firstName = $addRequest->firstname;
@@ -55,8 +62,16 @@ class AdminProviders extends Controller
     }
 
     // Update a provider in the DB
-    public function update(RequestProviders $updateRequest)
+    public function update(Request $updateRequest)
     {
+        $validatedData = $updateRequest->validate([
+            'updateLastname' => 'required|min:4|regex:/^[a-zA-Z]*$/',
+            'updateFirstname' => 'required|min:4|regex:/^[a-zA-Z]*$/',
+            'updateCompany' => 'required',
+            'updateAddress' => 'required',
+            'updatePhone' => 'required|regex:/^[0-9]*$/'
+        ]);
+
         $update = Users::find($updateRequest->btnUpdate);
         $update->lastName = $updateRequest->updateLastname;
         $update->firstName = $updateRequest->updateFirstname;

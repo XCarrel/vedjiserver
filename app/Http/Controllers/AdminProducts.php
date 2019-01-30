@@ -6,7 +6,6 @@ use App\product_supplier;
 use App\Products;
 use App\units;
 use App\Users;
-use App\Http\Requests\RequestProducts;
 use Illuminate\Http\Request;
 
 class AdminProducts extends Controller
@@ -21,12 +20,19 @@ class AdminProducts extends Controller
     public function showAdd()
     {
         $units = units::all();
-        return view('showAdd')->with('units', $units);
+        return view('showAddProduct')->with('units', $units);
     }
 
     // Add a product in the DB
-    public function add(RequestProducts $addRequest)
+    public function add(Request $addRequest)
     {
+        $validatedData = $addRequest->validate([
+            'product' => 'required|min:4|regex:/^[a-zA-Z]*$/',
+            'stock' => 'required|regex:/^[0-9]*$/',
+            'price' => 'required|regex:/^[0-9]*$/',
+            'picture' => 'required',
+        ]);
+
         $add = new Products();
         $add->productName = $addRequest->product;
         $add->stock = $addRequest->stock;
@@ -76,8 +82,14 @@ class AdminProducts extends Controller
     }
 
     // Update a product in the DB
-    public function update(RequestProducts $updateRequest)
+    public function update(Request $updateRequest)
     {
+        $validatedData = $updateRequest->validate([
+            'updateName' => 'required|min:4|regex:/^[a-zA-Z]*$/',
+            'updateStok' => 'required|regex:/^[0-9]*$/',
+            'updatePrice' => 'required|regex:/^[0-9]*$/'
+        ]);
+        
         $update = Products::find($updateRequest->btnUpdate);
         $update->productName = $updateRequest->updateName;
         $update->stock = $updateRequest->updateStok;
