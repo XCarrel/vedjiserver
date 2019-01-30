@@ -24,6 +24,7 @@ class AdminProducts extends Controller
     }
 
     // Add a product in the DB
+    // TODO: make a better regex with numbers
     public function add(Request $addRequest)
     {
         $validatedData = $addRequest->validate([
@@ -82,6 +83,7 @@ class AdminProducts extends Controller
     }
 
     // Update a product in the DB
+    // TODO: make a better regex with numbers
     public function update(Request $updateRequest)
     {
         $validatedData = $updateRequest->validate([

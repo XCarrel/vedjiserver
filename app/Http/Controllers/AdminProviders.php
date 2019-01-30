@@ -23,6 +23,7 @@ class AdminProviders extends Controller
     }
 
     // Add a provider in the DB
+    // TODO: make a better regex with numbers
     public function add(Request $addRequest)
     {
         $validatedData = $addRequest->validate([
@@ -62,6 +63,7 @@ class AdminProviders extends Controller
     }
 
     // Update a provider in the DB
+    // TODO: make a better regex with numbers
     public function update(Request $updateRequest)
     {
         $validatedData = $updateRequest->validate([
