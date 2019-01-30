@@ -101,15 +101,18 @@ Route::view('/', 'welcome');
 Route::view('/docApi', 'docApi');
 Route::view('/admin', 'admin');
 
+Route::get('/products/showAdd', 'AdminProducts@showAdd');
+Route::get('/providers/showAdd', 'AdminProviders@showAdd');
+
 Route::get('/products', 'AdminProducts@index');
 Route::post('/products/add', 'AdminProducts@add');
 Route::post('/products/delete', 'AdminProducts@delete');
-Route::post('/products/getProducts', 'AdminProducts@getProducts');
+Route::get('/products/getProducts/{id}', 'AdminProducts@getProducts');
 Route::post('/products/update', 'AdminProducts@update');
 
 Route::get('/providers', 'AdminProviders@index');
 Route::post('/providers/add', 'AdminProviders@add');
 Route::post('/providers/delete', 'AdminProviders@delete');
-Route::post('/providers/getProviders', 'AdminProviders@getProviders');
+Route::get('/providers/getProviders/{id}', 'AdminProviders@getProviders');
 Route::post('/providers/update', 'AdminProviders@update');
 

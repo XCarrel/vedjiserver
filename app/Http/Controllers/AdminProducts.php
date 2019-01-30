@@ -6,6 +6,7 @@ use App\product_supplier;
 use App\Products;
 use App\units;
 use App\Users;
+use App\Http\Requests\RequestProducts;
 use Illuminate\Http\Request;
 
 class AdminProducts extends Controller
@@ -14,12 +15,17 @@ class AdminProducts extends Controller
     public function index()
     {
         $products = Products::all();
+        return view('products')->with('products', $products);
+    }
+
+    public function showAdd()
+    {
         $units = units::all();
-        return view('products')->with('products', $products)->with('units', $units);
+        return view('showAdd')->with('units', $units);
     }
 
     // Add a product in the DB
-    public function add(Request $addRequest)
+    public function add(RequestProducts $addRequest)
     {
         $add = new Products();
         $add->productName = $addRequest->product;
@@ -45,16 +51,15 @@ class AdminProducts extends Controller
     }
 
     // Get the informations for the product 
-    public function getProducts(Request $getInfo)
+    public function getProducts($id)
     {
-        $getProduct = Products::find($getInfo->update);
+        $getProduct = Products::find($id);
         $units = units::all();
         $users = Users::all();
-        $array = array();
         foreach($users as $user)
         {
             // Check if a provider provides the product 
-            $providers = product_supplier::where('supplier_id', '=', $user->id)->where('product_id', '=', $getInfo->update)->get();
+            $providers = product_supplier::where('supplier_id', '=', $user->id)->where('product_id', '=', $id)->get();
             foreach($providers as $provider)
             {
                 if($user->id == $provider->supplier_id)
@@ -67,11 +72,11 @@ class AdminProducts extends Controller
                 }
             }
         }
-        return view('updateProduct')->with('data', $getProduct)->with('units', $units)->with('users', $users)->with('array', $array);
+        return view('updateProduct')->with('data', $getProduct)->with('units', $units)->with('users', $users);
     }
 
     // Update a product in the DB
-    public function update(Request $updateRequest)
+    public function update(RequestProducts $updateRequest)
     {
         $update = Products::find($updateRequest->btnUpdate);
         $update->productName = $updateRequest->updateName;
