@@ -71,7 +71,7 @@ class AdminProviders extends Controller
             'updateFirstname' => 'required|min:4|regex:/^[a-zA-Z]*$/',
             'updateCompany' => 'required',
             'updateAddress' => 'required',
-            'updatePhone' => 'required|regex:/[0-9]+(\.[0-9][0-9]?)?/'
+            'updatePhone' => 'required|regex:/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/'
         ]);
 
         $update = Users::find($updateRequest->btnUpdate);
