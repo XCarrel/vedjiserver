@@ -29,8 +29,8 @@ class AdminProducts extends Controller
     {
         $validatedData = $addRequest->validate([
             'product' => 'required|min:4|regex:/^[a-zA-Z]*$/',
-            'stock' => 'required|regex:/^[0-9]*$/',
-            'price' => 'required|regex:/^[0-9]*$/',
+            'stock' => 'required|regex:/[0-9]+(\.[0-9][0-9]?)?/',
+            'price' => 'required|regex:/[0-9]+(\.[0-9][0-9]?)?/',
             'picture' => 'required',
         ]);
 
@@ -88,8 +88,8 @@ class AdminProducts extends Controller
     {
         $validatedData = $updateRequest->validate([
             'updateName' => 'required|min:4|regex:/^[a-zA-Z]*$/',
-            'updateStok' => 'required|regex:/^[0-9]*$/',
-            'updatePrice' => 'required|regex:/^[0-9]*$/'
+            'updateStok' => 'required|regex:/[0-9]+(\.[0-9][0-9]?)?/',
+            'updatePrice' => 'required|regex:/[0-9]+(\.[0-9][0-9]?)?/'
         ]);
         
         $update = Products::find($updateRequest->btnUpdate);
