@@ -45,6 +45,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <img src="{{$data->picture}}" width="50%"/>
+                                </div>
+                                <div class="form-group">
                                     <input type="file" name="updatePicture">
                                 </div>
                                 <div class="form-check">
