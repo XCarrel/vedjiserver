@@ -68,7 +68,7 @@
 
                             <div class="modal-footer">
                                 <a href="/providers"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button> </a>
-                                    <button type="submit" class="btn btn-primary" value="{{$data->id}}" name="btnUpdate">Modifier</button>
+                                <button type="submit" class="btn btn-primary" value="{{$data->id}}" name="btnUpdate">Modifier</button>
                             </div>
                         </form>
                     </div>

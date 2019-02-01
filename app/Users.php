@@ -17,4 +17,9 @@ class Users extends Model
     {
         return $this->belongsToMany('App\Products', 'product_supplier', 'supplier_id', 'product_id');
     }
+
+    public function commande()
+    {
+        return $this->belongsToMany('App\Products', 'orderItems', 'user_id', 'product_id');
+    }
 }

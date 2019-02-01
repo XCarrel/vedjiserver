@@ -100,6 +100,7 @@ Route::get('/api/v1/orders', function (Request $request) {
 Route::view('/', 'welcome');
 Route::view('/docApi', 'docApi');
 Route::view('/admin', 'admin');
+Route::get('/commande', 'AdminCommande@index');
 
 Route::get('/products/showAdd', 'AdminProducts@showAdd');
 Route::get('/providers/showAdd', 'AdminProviders@showAdd');
@@ -109,6 +110,7 @@ Route::post('/products/add', 'AdminProducts@add');
 Route::post('/products/delete', 'AdminProducts@delete');
 Route::get('/products/getProducts/{id}', 'AdminProducts@getProducts');
 Route::post('/products/update', 'AdminProducts@update');
+Route::post('/products/commande', 'AdminProducts@commande');
 
 Route::get('/providers', 'AdminProviders@index');
 Route::post('/providers/add', 'AdminProviders@add');

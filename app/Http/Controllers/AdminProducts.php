@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\OrderItems;
 use App\product_supplier;
 use App\Products;
 use App\units;
@@ -121,6 +122,16 @@ class AdminProducts extends Controller
                 $selectProviders->save();
             }
         }
+        return redirect('products');
+    }
+
+    public function commande(Request $commandeAction)
+    {
+        $commande = new OrderItems();
+        $commande->user_id = $commandeAction->provider;
+        $commande->product_id = $commandeAction->idProduct;
+        $commande->quantity = $commandeAction->newStock;
+        $commande->save();
         return redirect('products');
     }
 }
