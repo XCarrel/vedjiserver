@@ -14,32 +14,21 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>Produits</th>
-                    <th>Stock</th>
-                    <th>Prix</th>
-                    <th>Unité</th>
-                    <th colspan="2">Actions</th>
+                    <th>Nouvelle quantité</th>
+                    <th>Frounisseur</th>
+                    <th>Date</th>
                 </tr>
 
-                @foreach($commandes as $commandes)
+                @foreach($commandes as $commande)
                     <tr>
-                        <td>{{$product->productName}}</td>
-                        <td>{{$product->stock}}</td>
-                        <td>{{$product->price}}</td>
-                        <td>{{$product->units->unitName}}</td>
-                        <td>
-                            <form method="post" action="/products/delete">
-                                @csrf
-                                <button name="del" value="{{$product->id}}" class="btn btn-danger">Supprimer</button>
-                            </form>
-                        </td>
-                        <td>
-                            <a name="update" href="/products/getProducts/{{$product->id}}" class="btn btn-warning">Modifier</a>
-                        </td>
-                    </tr>
+                        <td>{{$commande->productName}}</td>
+                        <td>{{$commande->quantity}}</td>
+                        <td>{{$commande->firstName}} {{$commande->lastName}}</td>
+                        <td>{{$commande->date}}</td>
                 @endforeach
             </table>
             
-            <a href="/products/showAdd" style="margin-top:20px" class="btn btn-primary">Ajouter un produit</a>
+            <a href="/admin" style="margin-top:20px" class="btn btn-primary">Retour</a>
         </div>
     </div>
 @endsection

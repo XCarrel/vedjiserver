@@ -10,7 +10,7 @@
                 <a href="/">Accueil</a>
                 <a href="/products">Produits</a>
                 <a href="/providers">Fournisseurs</a>
-                <a href="/commande">Commande</a>
+                <a href="/commande">Commandes</a>
             </div>
 
         </div>
